@@ -1,0 +1,187 @@
+/* Dark Theme Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    animation: pageEnter 0.5s ease-in-out;
+}
+
+/* Header */
+header {
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Main Content - Ensures Full-Screen Height */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Introduction Section */
+.intro {
+    text-align: center;
+    padding: 50px;
+    max-width: 800px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    border: 2px solid #333;
+    margin: 50px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.intro h2 {
+    font-size: 28px;
+    color: #007bff;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Home Sections */
+.home-section {
+    text-align: center;
+    padding: 40px;
+    width: 80%;
+    max-width: 800px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+    border: 2px solid #333;
+    margin: 30px auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.home-section h2 {
+    color: #00bcd4;
+    font-size: 24px;
+}
+
+.home-section p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    background: #007bff;
+    color: white;
+    border: 2px solid #0056b3;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: #0056b3;
+    border-color: #004494;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: #1e1e1e;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Page Transition Effects */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes pageExit {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.02);
+        filter: blur(10px);
+    }
+}
+
+body.page-exit {
+    animation: pageExit 0.5s ease-in-out forwards;
+}
+
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
